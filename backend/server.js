@@ -11,8 +11,9 @@ dotenv.config();
 
 const cors = require("cors");
 const corsOptions = {
-  origin: "*",
+  origin: ["https://services-lilac.vercel.app/"],
   credentials: true, //access-control-allow-credentials:true
+  methods: ["POST", "GET"],
   optionSuccessStatus: 200,
 };
 
@@ -71,8 +72,9 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-const PORT = process.env.PORT;
+// const PORT = process.env.PORT;
 
-app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Example app listening on port ${PORT}`);
+// });
+module.exports = app;

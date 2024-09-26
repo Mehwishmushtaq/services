@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import styles from "./styles.module.css";
 
 const Login = () => {
@@ -14,7 +14,7 @@ const Login = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "https://services-lilac.vercel.app/api/auth";
+			const url = "http://localhost:8000/api/auth";
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.data);
 			window.location = "/our-blogs";

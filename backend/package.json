@@ -21,6 +21,6 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.6.2",
     "nodemailer": "^6.9.15",
-    "noVirgosoftsn": "^3.1.5"
+    "nodemon": "^3.1.7"
   }
 }

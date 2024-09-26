@@ -1,0 +1,177 @@
+/* General styles for the container */
+.signup_container {
+	width: 100%;
+	min-height: 100vh;
+	background-color: #f5f5f5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px; /* Added padding for mobile responsiveness */
+}
+
+/* Flexbox container for sign-up form */
+.signup_form_container {
+	width: 900px;
+	height: 500px;
+	display: flex;
+	flex-wrap: wrap; /* Allow wrapping for smaller screens */
+	border-radius: 10px;
+	box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
+		0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
+	background-color: white;
+}
+
+/* Left side of the form */
+.left {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #172554;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	padding: 20px; /* Added padding for better spacing */
+}
+
+.left h1 {
+	margin-top: 0;
+	color: white;
+	font-size: 35px;
+	text-align: center; /* Center the text */
+}
+
+/* Right side of the form */
+.right {
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	padding: 20px;
+}
+
+/* Form container */
+.form_container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.form_container h1 {
+	font-size: 40px;
+	margin-top: 0;
+	text-align: center; /* Ensure heading is centered */
+}
+
+/* Input fields */
+.input {
+	outline: none;
+	border: none;
+	width: 370px;
+	padding: 15px;
+	border-radius: 10px;
+	background-color: #edf5f3;
+	margin: 5px 0;
+	font-size: 14px;
+}
+
+.error_msg {
+	width: 370px;
+	padding: 15px;
+	margin: 5px 0;
+	font-size: 14px;
+	background-color: #f34646;
+	color: white;
+	border-radius: 5px;
+	text-align: center;
+}
+
+/* Button styles */
+.white_btn,
+.blue_btn {
+	border: none;
+	outline: none;
+	padding: 12px 0;
+	background-color: white;
+	border-radius: 20px;
+	width: 180px;
+	font-weight: bold;
+	font-size: 14px;
+	cursor: pointer;
+	text-align: center;
+}
+
+.blue_btn {
+	background-color: #172554;
+	color: white;
+	margin: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+	/* For smaller laptops and tablets */
+	.signup_form_container {
+		width: 700px; /* Adjust the width */
+		height: auto; /* Allow the height to adjust based on content */
+	}
+
+	.input {
+		width: 300px; /* Reduce the width for smaller screens */
+	}
+
+	.error_msg {
+		width: 300px; /* Adjust the error message width */
+	}
+
+	.form_container h1,
+	.left h1 {
+		font-size: 32px; /* Reduce heading font size */
+	}
+}
+
+@media (max-width: 768px) {
+	/* For tablets and smaller screens */
+	.signup_form_container {
+		width: 100%; /* Take full width on smaller screens */
+		height: auto; /* Allow auto height */
+		flex-direction: column; /* Stack the columns vertically */
+	}
+
+	.left,
+	.right {
+		width: 100%; /* Take full width for both sides */
+		border-radius: 0; /* Remove border radius for full width */
+	}
+
+	.input,
+	.error_msg {
+		width: 90%; /* Adjust input width for smaller screens */
+	}
+
+	.form_container h1,
+	.left h1 {
+		font-size: 28px; /* Further reduce heading size */
+	}
+}
+
+@media (max-width: 480px) {
+	/* For phones */
+	.signup_form_container {
+		width: 100%; /* Take full width */
+	}
+
+	.input,
+	.error_msg {
+		width: 100%; /* Full width for input fields */
+	}
+
+	.white_btn,
+	.blue_btn {
+		width: 150px; /* Reduce button width */
+		font-size: 12px; /* Smaller font for buttons */
+	}
+}
